@@ -46,9 +46,9 @@ gem 'coderay'
 gem 'net-http-persistent'
 gem 'concurrent-ruby'
 gem 'vault'
-gem 'docker-api', '>= 1.32'
+gem 'docker-api', '>= 1.32.0'
 gem 'newrelic_rpm'
-gem 'cmd2json'
+gem 'cmd2json', '>= 0.2.0'
 
 # treat included plugins like gems
 Dir[File.join(Bundler.root, 'plugins/*/')].each { |f| gemspec path: f }
@@ -74,7 +74,7 @@ end
 group :assets do
   gem 'ngannotate-rails'
   gem 'sass-rails'
-  gem 'uglifier'
+  gem 'uglifier', '>= 2.7.2'
   gem 'angular-rails-templates'
   gem 'bootstrap-sass'
 
