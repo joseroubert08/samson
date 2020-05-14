@@ -7,19 +7,19 @@ ruby File.read('.ruby-version').strip
 group :preload do
   gem 'rails', '5.0.1'
   gem 'dotenv'
-  gem 'sse-rails-engine'
+  gem 'sse-rails-engine', '>= 1.5.0'
   gem 'connection_pool'
 
   # AR extensions
   gem 'goldiloader'
   gem 'kaminari', '~> 0.17.0'
-  gem 'active_model_serializers'
+  gem 'active_model_serializers', '>= 0.10.1'
   gem 'paper_trail'
   gem 'soft_deletion'
-  gem 'doorkeeper'
+  gem 'doorkeeper', '>= 4.2.0'
 
   # Logging
-  gem 'lograge'
+  gem 'lograge', '>= 0.3.6'
   gem 'logstash-event'
 end
 
@@ -29,16 +29,16 @@ gem 'puma'
 gem 'attr_encrypted'
 gem 'sawyer'
 gem 'dalli'
-gem 'omniauth'
-gem 'omniauth-oauth2'
-gem 'omniauth-github'
-gem 'omniauth-google-oauth2'
-gem 'omniauth-ldap'
-gem 'omniauth-gitlab', '~> 1.0.0'
+gem 'omniauth', '>= 1.3.1'
+gem 'omniauth-oauth2', '>= 1.4.0'
+gem 'omniauth-github', '>= 1.1.2'
+gem 'omniauth-google-oauth2', '>= 0.4.0'
+gem 'omniauth-ldap', '>= 1.0.5'
+gem 'omniauth-gitlab', '~> 1.0.2'
 gem 'octokit'
 gem 'faraday'
 gem 'faraday-http-cache'
-gem 'warden'
+gem 'warden', '>= 1.2.6'
 gem 'active_hash'
 gem 'ansible'
 gem 'github-markdown'
@@ -72,10 +72,10 @@ group :production, :staging do
 end
 
 group :assets do
-  gem 'ngannotate-rails'
-  gem 'sass-rails'
+  gem 'ngannotate-rails', '>= 1.2.1'
+  gem 'sass-rails', '>= 5.0.6'
   gem 'uglifier'
-  gem 'angular-rails-templates'
+  gem 'angular-rails-templates', '>= 1.0.2'
   gem 'bootstrap-sass'
 
   source 'https://rails-assets.org' do
@@ -109,8 +109,8 @@ end
 
 group :development, :staging do
   gem 'binding_of_caller'
-  gem 'better_errors'
-  gem 'rack-mini-profiler'
+  gem 'better_errors', '>= 2.1.1'
+  gem 'rack-mini-profiler', '>= 0.10.1'
 end
 
 group :development, :test do
@@ -129,7 +129,7 @@ end
 
 group :test do
   gem 'minitest-rails', '3.0.0'
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 0.1.1'
   gem 'maxitest'
   gem 'mocha'
   gem 'webmock'
