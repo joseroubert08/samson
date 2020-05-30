@@ -12,7 +12,7 @@ group :preload do
 
   # AR extensions
   gem 'goldiloader'
-  gem 'kaminari', '~> 0.17.0'
+  gem 'kaminari', '~> 1.2.1'
   gem 'active_model_serializers'
   gem 'paper_trail'
   gem 'soft_deletion'
