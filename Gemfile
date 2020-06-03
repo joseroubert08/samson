@@ -7,7 +7,7 @@ ruby File.read('.ruby-version').strip
 group :preload do
   gem 'rails', '5.0.1'
   gem 'dotenv'
-  gem 'sse-rails-engine'
+  gem 'sse-rails-engine', '>= 1.5.0'
   gem 'connection_pool'
 
   # AR extensions
@@ -72,7 +72,7 @@ group :production, :staging do
 end
 
 group :assets do
-  gem 'ngannotate-rails'
+  gem 'ngannotate-rails', '>= 1.2.1'
   gem 'sass-rails'
   gem 'uglifier'
   gem 'angular-rails-templates'
