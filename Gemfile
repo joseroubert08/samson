@@ -73,7 +73,7 @@ end
 
 group :assets do
   gem 'ngannotate-rails'
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 6.0.0'
   gem 'uglifier'
   gem 'angular-rails-templates'
   gem 'bootstrap-sass'
