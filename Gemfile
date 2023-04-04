@@ -5,18 +5,18 @@ ruby File.read('.ruby-version').strip
 
 # gems that have rails engines are are always needed
 group :preload do
-  gem 'rails', '5.0.1'
+  gem 'rails', '6.1.7.3'
   gem 'dotenv'
-  gem 'sse-rails-engine'
+  gem 'sse-rails-engine', '>= 1.7.0'
   gem 'connection_pool'
 
   # AR extensions
-  gem 'goldiloader'
-  gem 'kaminari', '~> 0.17.0'
-  gem 'active_model_serializers'
-  gem 'paper_trail'
-  gem 'soft_deletion'
-  gem 'doorkeeper'
+  gem 'goldiloader', '>= 3.2.0'
+  gem 'kaminari', '~> 1.2.1'
+  gem 'active_model_serializers', '>= 0.10.12'
+  gem 'paper_trail', '>= 10.3.1'
+  gem 'soft_deletion', '>= 1.6.0'
+  gem 'doorkeeper', '>= 4.4.0'
 
   # Logging
   gem 'lograge'
@@ -25,17 +25,17 @@ end
 
 gem 'bundler'
 gem 'dogstatsd-ruby'
-gem 'puma'
+gem 'puma', '>= 4.3.12'
 gem 'attr_encrypted'
-gem 'sawyer'
-gem 'dalli'
-gem 'omniauth'
-gem 'omniauth-oauth2'
-gem 'omniauth-github'
+gem 'sawyer', '>= 0.8.2'
+gem 'dalli', '>= 3.2.3'
+gem 'omniauth', '>= 2.1.0'
+gem 'omniauth-oauth2', '>= 1.7.1'
+gem 'omniauth-github', '>= 2.0.0'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-ldap'
-gem 'omniauth-gitlab', '~> 1.0.0'
-gem 'octokit'
+gem 'omniauth-gitlab', '~> 3.0.0'
+gem 'octokit', '>= 4.6.0'
 gem 'faraday'
 gem 'faraday-http-cache'
 gem 'warden'
@@ -46,7 +46,7 @@ gem 'coderay'
 gem 'net-http-persistent'
 gem 'concurrent-ruby'
 gem 'vault'
-gem 'docker-api', '>= 1.32'
+gem 'docker-api', '>= 1.32.0'
 gem 'newrelic_rpm'
 gem 'cmd2json'
 
@@ -73,10 +73,10 @@ end
 
 group :assets do
   gem 'ngannotate-rails'
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 6.0.0'
   gem 'uglifier'
-  gem 'angular-rails-templates'
-  gem 'bootstrap-sass'
+  gem 'angular-rails-templates', '>= 1.1.0'
+  gem 'bootstrap-sass', '>= 3.4.0'
 
   source 'https://rails-assets.org' do
     gem 'rails-assets-angular'
@@ -109,7 +109,7 @@ end
 
 group :development, :staging do
   gem 'binding_of_caller'
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
   gem 'rack-mini-profiler'
 end
 
@@ -121,15 +121,15 @@ group :development, :test do
   gem 'awesome_print'
   gem 'brakeman'
   gem 'brakecheck'
-  gem 'rubocop'
+  gem 'rubocop', '>= 0.49.0'
   gem 'flay'
   gem 'parallel_tests'
-  gem 'forking_test_runner'
+  gem 'forking_test_runner', '>= 1.1.0'
 end
 
 group :test do
-  gem 'minitest-rails', '3.0.0'
-  gem 'rails-controller-testing'
+  gem 'minitest-rails', '6.1.0'
+  gem 'rails-controller-testing', '>= 1.0.3'
   gem 'maxitest'
   gem 'mocha'
   gem 'webmock'
