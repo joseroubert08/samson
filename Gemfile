@@ -7,7 +7,7 @@ ruby File.read('.ruby-version').strip
 group :preload do
   gem 'rails', '5.0.1'
   gem 'dotenv'
-  gem 'sse-rails-engine'
+  gem 'sse-rails-engine', '>= 1.7.0'
   gem 'connection_pool'
 
   # AR extensions

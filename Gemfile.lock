@@ -1,94 +1,3 @@
-PATH
-  remote: plugins/airbrake
-  specs:
-    samson_airbrake (0.0.0)
-      airbrake
-
-PATH
-  remote: plugins/aws_ecr
-  specs:
-    samson_aws_ecr (0.0.0)
-      aws-sdk-core
-
-PATH
-  remote: plugins/datadog
-  specs:
-    samson_datadog (0.0.0)
-      dogapi (~> 1.9)
-
-PATH
-  remote: plugins/docker_binary_builder
-  specs:
-    samson_docker_binary_builder (0.0.0)
-
-PATH
-  remote: plugins/dockerb
-  specs:
-    samson_dockerb (0.0.0)
-      dockerb
-
-PATH
-  remote: plugins/env
-  specs:
-    samson_env (0.0.0)
-      dotenv
-
-PATH
-  remote: plugins/flowdock
-  specs:
-    samson_flowdock (0.0.0)
-      flowdock (~> 0.6.0)
-
-PATH
-  remote: plugins/hyperclair
-  specs:
-    samson_hyperclair (0.0.0)
-
-PATH
-  remote: plugins/jenkins
-  specs:
-    samson_jenkins (0.0.0)
-      jenkins_api_client (~> 1.3)
-
-PATH
-  remote: plugins/kubernetes
-  specs:
-    samson_kubernetes (0.0.1)
-      kubeclient (>= 2)
-
-PATH
-  remote: plugins/new_relic
-  specs:
-    samson_new_relic (0.0.0)
-
-PATH
-  remote: plugins/pipelines
-  specs:
-    samson_pipelines (0.0.0)
-
-PATH
-  remote: plugins/samson_ledger
-  specs:
-    samson_ledger (0.0.1)
-      faraday
-
-PATH
-  remote: plugins/slack_app
-  specs:
-    samson_slack_app (0.0.0)
-
-PATH
-  remote: plugins/slack_webhooks
-  specs:
-    samson_slack_webhooks (0.0.0)
-      faraday
-
-PATH
-  remote: plugins/zendesk
-  specs:
-    samson_zendesk (0.0.0)
-      zendesk_api
-
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -153,8 +62,6 @@ GEM
     autoprefixer-rails (6.3.3.1)
       execjs
     awesome_print (1.6.1)
-    aws-sdk-core (2.2.36)
-      jmespath (~> 1.0)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -167,26 +74,23 @@ GEM
       sass (>= 3.3.4)
     brakecheck (0.1.9)
     brakeman (3.4.1)
-    builder (3.2.2)
+    builder (3.2.4)
     byebug (8.2.2)
     cmd2json (0.2.0)
       json
     coderay (1.1.1)
-    concurrent-ruby (1.0.3)
+    concurrent-ruby (1.0.5)
     connection_pool (2.2.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    crass (1.0.6)
     dalli (2.7.6)
+    date (3.3.3)
     debug_inspector (0.0.2)
     docker-api (1.32.0)
       excon (>= 0.38.0)
       json
-    dockerb (0.3.0)
-    dogapi (1.21.0)
-      multi_json
     dogstatsd-ruby (1.6.0)
-    domain_name (0.5.20160826)
-      unf (>= 0.0.5, < 1.0.0)
     doorkeeper (4.2.0)
       railties (>= 4.2)
     dotenv (2.1.1)
@@ -203,74 +107,49 @@ GEM
       path_expander (~> 1.0)
       ruby_parser (~> 3.0)
       sexp_processor (~> 4.0)
-    flowdock (0.6.0)
-      httparty (~> 0.7)
-      multi_json
     forking_test_runner (0.8.0)
       activerecord (< 5.1.0)
       parallel_tests (>= 1.3.7)
     github-markdown (0.6.9)
-    globalid (0.3.7)
-      activesupport (>= 4.1.0)
+    globalid (1.1.0)
+      activesupport (>= 5.0)
     goldiloader (0.0.10)
       activerecord (>= 3.2, < 5.1)
       activesupport (>= 3.2, < 5.1)
     hashdiff (0.3.0)
     hashie (3.4.4)
-    http (0.9.8)
-      addressable (~> 2.3)
-      http-cookie (~> 1.0)
-      http-form_data (~> 1.0.1)
-      http_parser.rb (~> 0.6.0)
-    http-cookie (1.0.3)
-      domain_name (~> 0.5)
-    http-form_data (1.0.1)
-    http_parser.rb (0.6.0)
-    httparty (0.13.7)
-      json (~> 1.8)
-      multi_xml (>= 0.5.2)
-    i18n (0.7.0)
-    inflection (1.0.0)
-    jenkins_api_client (1.4.2)
-      json
-      mixlib-shellout (>= 1.1.0)
-      nokogiri (~> 1.6.0)
-      terminal-table (>= 1.4.0)
-      thor (>= 0.16.0)
-    jmespath (1.2.4)
-      json_pure (>= 1.8.1)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     json (1.8.3)
-    json_pure (1.8.3)
     jsonapi (0.1.1.beta2)
       json (~> 1.8)
     jwt (1.5.1)
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kubeclient (2.1.0)
-      http (= 0.9.8)
-      recursive-open-struct (= 1.0.0)
-      rest-client
     lograge (0.3.6)
       actionpack (>= 3)
       activesupport (>= 3)
       railties (>= 3)
     logstash-event (1.2.02)
-    loofah (2.0.3)
+    loofah (2.20.0)
+      crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.6.4)
-      mime-types (>= 1.16, < 4)
+    mail (2.8.1)
+      mini_mime (>= 0.1.1)
+      net-imap
+      net-pop
+      net-smtp
     maxitest (2.4.0)
       minitest (>= 5.0.0, < 5.11.0)
     metaclass (0.0.4)
     method_source (0.8.2)
-    mime-types (2.99.3)
-    mini_portile2 (2.1.0)
-    minitest (5.10.1)
+    mini_mime (1.1.2)
+    mini_portile2 (2.8.2)
+    minitest (5.10.3)
     minitest-rails (3.0.0)
       minitest (~> 5.8)
       railties (~> 5.0)
-    mixlib-shellout (2.2.6)
     mocha (1.2.1)
       metaclass (~> 0.0.1)
     multi_json (1.12.0)
@@ -278,15 +157,24 @@ GEM
     multipart-post (2.0.0)
     mysql2 (0.4.4)
     net-http-persistent (2.9.4)
+    net-imap (0.3.4)
+      date
+      net-protocol
     net-ldap (0.14.0)
-    netrc (0.11.0)
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.2.1)
+      timeout
+    net-smtp (0.3.3)
+      net-protocol
     newrelic_rpm (3.15.2.317)
     ngannotate-rails (1.2.1)
       execjs
       rails (>= 3.1)
     nio4r (1.2.1)
-    nokogiri (1.6.8.1)
-      mini_portile2 (~> 2.1.0)
+    nokogiri (1.14.3)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     oauth2 (1.1.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0, < 1.5.2)
@@ -338,7 +226,8 @@ GEM
     puma (3.4.0)
     pyu-ruby-sasl (0.0.3.3)
     query_diet (0.6.0)
-    rack (2.0.1)
+    racc (1.6.2)
+    rack (2.2.7)
     rack-mini-profiler (0.10.1)
       rack (>= 1.2.0)
     rack-test (0.6.3)
@@ -409,11 +298,11 @@ GEM
       actionpack (~> 5.x)
       actionview (~> 5.x)
       activesupport (~> 5.x)
-    rails-dom-testing (2.0.1)
-      activesupport (>= 4.2.0, < 6.0)
-      nokogiri (~> 1.6.0)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
+    rails-dom-testing (2.0.3)
+      activesupport (>= 4.2.0)
+      nokogiri (>= 1.6)
+    rails-html-sanitizer (1.5.0)
+      loofah (~> 2.19, >= 2.19.1)
     railties (5.0.1)
       actionpack (= 5.0.1)
       activesupport (= 5.0.1)
@@ -421,13 +310,8 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (2.1.0)
-    rake (12.0.0)
-    recursive-open-struct (1.0.0)
+    rake (13.0.6)
     request_store (1.3.1)
-    rest-client (2.0.0)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 4.0)
-      netrc (~> 0.8)
     rubocop (0.43.0)
       parser (>= 2.3.1.1, < 3.0)
       powerpack (~> 0.1)
@@ -449,36 +333,32 @@ GEM
     sawyer (0.6.0)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
-    scrub_rb (1.0.1)
     sexp_processor (4.7.0)
     single_cov (0.5.9)
     slop (3.6.0)
     soft_deletion (0.8.2)
       activerecord (>= 3.2.0, < 5.1.0)
-    sprockets (3.7.1)
+    sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.2.0)
+    sprockets-rails (3.2.2)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.11)
-    sse-rails-engine (1.5.0)
-      rails (>= 4.0, < 5.1)
+    sse-rails-engine (1.7.0)
+      rails (>= 4.2.0, < 5.3)
     sucker_punch (2.0.1)
       concurrent-ruby (~> 1.0.0)
-    terminal-table (1.5.2)
-    thor (0.19.4)
-    thread_safe (0.3.5)
+    thor (1.2.1)
+    thread_safe (0.3.6)
     tilt (2.0.5)
-    tzinfo (1.2.2)
+    timeout (0.3.2)
+    tzinfo (1.2.11)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.2)
     unicode-display_width (1.1.1)
     vault (0.7.1)
     warden (1.2.6)
@@ -487,16 +367,9 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
-    websocket-driver (0.6.4)
+    websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.2)
-    zendesk_api (1.13.4)
-      faraday (~> 0.9)
-      hashie (>= 1.2, < 4.0, != 3.3.0)
-      inflection
-      mime-types (~> 2.99)
-      multipart-post (~> 2.0)
-      scrub_rb (~> 1.0.1)
+    websocket-extensions (0.1.5)
 
 PLATFORMS
   ruby
@@ -585,28 +458,12 @@ DEPENDENCIES
   rails-assets-x-editable!
   rails-controller-testing
   rubocop
-  samson_airbrake!
-  samson_aws_ecr!
-  samson_datadog!
-  samson_docker_binary_builder!
-  samson_dockerb!
-  samson_env!
-  samson_flowdock!
-  samson_hyperclair!
-  samson_jenkins!
-  samson_kubernetes!
-  samson_ledger!
-  samson_new_relic!
-  samson_pipelines!
-  samson_slack_app!
-  samson_slack_webhooks!
-  samson_zendesk!
   sass-rails
   sawyer
   single_cov
   soft_deletion
   sqlite3
-  sse-rails-engine
+  sse-rails-engine (>= 1.7.0)
   sucker_punch (~> 2.0)
   uglifier
   vault
@@ -614,7 +471,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.7.6p219
 
 BUNDLED WITH
-   1.13.6
+   1.17.3
