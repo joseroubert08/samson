@@ -16,7 +16,7 @@ group :preload do
   gem 'active_model_serializers'
   gem 'paper_trail'
   gem 'soft_deletion'
-  gem 'doorkeeper'
+  gem 'doorkeeper', '>= 5.6.6'
 
   # Logging
   gem 'lograge'
