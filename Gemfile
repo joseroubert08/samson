@@ -5,7 +5,7 @@ ruby File.read('.ruby-version').strip
 
 # gems that have rails engines are are always needed
 group :preload do
-  gem 'rails', '5.0.1'
+  gem 'rails', '7.1.0'
   gem 'dotenv'
   gem 'sse-rails-engine'
   gem 'connection_pool'
@@ -72,7 +72,7 @@ group :production, :staging do
 end
 
 group :assets do
-  gem 'ngannotate-rails'
+  gem 'ngannotate-rails', '>= 1.2.2'
   gem 'sass-rails'
   gem 'uglifier'
   gem 'angular-rails-templates'
