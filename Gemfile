@@ -7,7 +7,7 @@ ruby File.read('.ruby-version').strip
 group :preload do
   gem 'rails', '5.0.1'
   gem 'dotenv'
-  gem 'sse-rails-engine'
+  gem 'sse-rails-engine', '>= 1.6.0'
   gem 'connection_pool'
 
   # AR extensions
@@ -16,10 +16,10 @@ group :preload do
   gem 'active_model_serializers'
   gem 'paper_trail'
   gem 'soft_deletion'
-  gem 'doorkeeper'
+  gem 'doorkeeper', '>= 4.2.5'
 
   # Logging
-  gem 'lograge'
+  gem 'lograge', '>= 0.9.0'
   gem 'logstash-event'
 end
 
@@ -72,7 +72,7 @@ group :production, :staging do
 end
 
 group :assets do
-  gem 'ngannotate-rails'
+  gem 'ngannotate-rails', '>= 1.2.2'
   gem 'sass-rails'
   gem 'uglifier'
   gem 'angular-rails-templates'
@@ -129,7 +129,7 @@ end
 
 group :test do
   gem 'minitest-rails', '3.0.0'
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 1.0.3'
   gem 'maxitest'
   gem 'mocha'
   gem 'webmock'
