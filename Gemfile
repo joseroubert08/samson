@@ -5,15 +5,15 @@ ruby File.read('.ruby-version').strip
 
 # gems that have rails engines are are always needed
 group :preload do
-  gem 'rails', '5.0.1'
+  gem 'rails', '7.0.0'
   gem 'dotenv'
   gem 'sse-rails-engine'
   gem 'connection_pool'
 
   # AR extensions
   gem 'goldiloader'
-  gem 'kaminari', '~> 0.17.0'
-  gem 'active_model_serializers'
+  gem 'kaminari', '~> 1.0.0'
+  gem 'active_model_serializers', '>= 0.10.3'
   gem 'paper_trail'
   gem 'soft_deletion'
   gem 'doorkeeper'
@@ -73,7 +73,7 @@ end
 
 group :assets do
   gem 'ngannotate-rails'
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 6.0.0'
   gem 'uglifier'
   gem 'angular-rails-templates'
   gem 'bootstrap-sass'
