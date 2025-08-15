@@ -5,17 +5,17 @@ ruby File.read('.ruby-version').strip
 
 # gems that have rails engines are are always needed
 group :preload do
-  gem 'rails', '5.0.1'
+  gem 'rails', '7.1.5.2'
   gem 'dotenv'
   gem 'sse-rails-engine'
   gem 'connection_pool'
 
   # AR extensions
-  gem 'goldiloader'
+  gem 'goldiloader', '>= 4.2.0'
   gem 'kaminari', '~> 0.17.0'
   gem 'active_model_serializers'
-  gem 'paper_trail'
-  gem 'soft_deletion'
+  gem 'paper_trail', '>= 10.3.1'
+  gem 'soft_deletion', '>= 1.9.0'
   gem 'doorkeeper'
 
   # Logging
@@ -72,7 +72,7 @@ group :production, :staging do
 end
 
 group :assets do
-  gem 'ngannotate-rails'
+  gem 'ngannotate-rails', '>= 1.2.2'
   gem 'sass-rails'
   gem 'uglifier'
   gem 'angular-rails-templates'
@@ -124,7 +124,7 @@ group :development, :test do
   gem 'rubocop'
   gem 'flay'
   gem 'parallel_tests'
-  gem 'forking_test_runner'
+  gem 'forking_test_runner', '>= 1.1.0'
 end
 
 group :test do
