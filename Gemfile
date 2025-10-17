@@ -5,21 +5,21 @@ ruby File.read('.ruby-version').strip
 
 # gems that have rails engines are are always needed
 group :preload do
-  gem 'rails', '5.0.1'
+  gem 'rails', '5.0.2'
   gem 'dotenv'
-  gem 'sse-rails-engine'
+  gem 'sse-rails-engine', '>= 1.6.0'
   gem 'connection_pool'
 
   # AR extensions
   gem 'goldiloader'
-  gem 'kaminari', '~> 0.17.0'
-  gem 'active_model_serializers'
+  gem 'kaminari', '~> 1.0.0'
+  gem 'active_model_serializers', '>= 0.10.2'
   gem 'paper_trail'
   gem 'soft_deletion'
-  gem 'doorkeeper'
+  gem 'doorkeeper', '>= 4.2.5'
 
   # Logging
-  gem 'lograge'
+  gem 'lograge', '>= 0.4.1'
   gem 'logstash-event'
 end
 
@@ -29,16 +29,16 @@ gem 'puma'
 gem 'attr_encrypted'
 gem 'sawyer'
 gem 'dalli'
-gem 'omniauth'
-gem 'omniauth-oauth2'
-gem 'omniauth-github'
-gem 'omniauth-google-oauth2'
-gem 'omniauth-ldap'
-gem 'omniauth-gitlab', '~> 1.0.0'
+gem 'omniauth', '>= 1.3.2'
+gem 'omniauth-oauth2', '>= 1.5.0'
+gem 'omniauth-github', '>= 1.2.0'
+gem 'omniauth-google-oauth2', '>= 0.4.1'
+gem 'omniauth-ldap', '>= 2.0.0'
+gem 'omniauth-gitlab', '~> 1.0.3'
 gem 'octokit'
 gem 'faraday'
 gem 'faraday-http-cache'
-gem 'warden'
+gem 'warden', '>= 1.2.7'
 gem 'active_hash'
 gem 'ansible'
 gem 'github-markdown'
@@ -72,10 +72,10 @@ group :production, :staging do
 end
 
 group :assets do
-  gem 'ngannotate-rails'
-  gem 'sass-rails'
+  gem 'ngannotate-rails', '>= 1.2.2'
+  gem 'sass-rails', '>= 5.0.7'
   gem 'uglifier'
-  gem 'angular-rails-templates'
+  gem 'angular-rails-templates', '>= 1.1.0'
   gem 'bootstrap-sass'
 
   source 'https://rails-assets.org' do
@@ -109,8 +109,8 @@ end
 
 group :development, :staging do
   gem 'binding_of_caller'
-  gem 'better_errors'
-  gem 'rack-mini-profiler'
+  gem 'better_errors', '>= 2.2.0'
+  gem 'rack-mini-profiler', '>= 0.10.2'
 end
 
 group :development, :test do
@@ -128,8 +128,8 @@ group :development, :test do
 end
 
 group :test do
-  gem 'minitest-rails', '3.0.0'
-  gem 'rails-controller-testing'
+  gem 'minitest-rails', '5.0.0'
+  gem 'rails-controller-testing', '>= 1.0.0'
   gem 'maxitest'
   gem 'mocha'
   gem 'webmock'
